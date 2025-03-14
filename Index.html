@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Copas e Ligas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Botão para abrir a aba lateral -->
+    <button class="open-sidebar" onclick="toggleSidebar()">☰</button>
+
+    <!-- Aba lateral (menu) -->
+    <div class="sidebar" id="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li onclick="openEditPanel()">➕ Adicionar Jogador</li>
+            <li onclick="alert('Versão do App: 1.0')">📌 Versão do App</li>
+            <li onclick="alert('Este app foi criado para contar Copas e Ligas vencidas no PlayStation, criado por Elijunio & IA')">ℹ️ Sobre o App</li>
+        </ul>
+    </div>
+
+    <!-- Aba de edição -->
+    <div class="edit-panel" id="editPanel">
+        <button class="close-edit" onclick="closeEditPanel()">✖</button>
+        <h2>Adicionar Jogador</h2>
+        <input type="text" id="playerName" placeholder="Nome do jogador">
+        <input type="text" id="playerTeam" placeholder="Time do jogador">
+        <input type="number" id="playerCopas" placeholder="Quantidade de Copas" min="0">
+        <input type="number" id="playerLigas" placeholder="Quantidade de Ligas" min="0">
+        <button onclick="savePlayer()">Salvar</button>
+    </div>
+
+    <div class="container">
+        <h1>Ranking de Jogadores</h1>
+        <div id="playersList"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

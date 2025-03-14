@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Botão para abrir a aba */
+.open-sidebar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1002; /* Mantém o botão acima de tudo */
+}
+
+
+.open-sidebar:hover {
+    background: #e68900;
+}
+
+/* Sidebar (menu) */
+.sidebar {
+    width: 250px;
+    background: #1c1c1c;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: -270px;
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 1001; /* Garante que a sidebar fique acima do conteúdo */
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: #ff9800;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    color: white;
+}
+
+.sidebar ul li:hover {
+    background: #333;
+}
+
+/* Aba de edição */
+.edit-panel {
+    width: 300px;
+    background: #1e1e1e;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+}
+
+.close-edit {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 18px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.close-edit:hover {
+    color: #ff9800;
+}
+
+.edit-panel input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+    background: #2a2a2a;
+    color: white;
+}
+
+.edit-panel button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.edit-panel button:hover {
+    background-color: #e68900;
+}
+
+/* Conteúdo principal */
+.container {
+    margin-left: 20px;
+    padding: 20px;
+    flex: 1;
+}
+
+h1 {
+    text-align: center;
+    color: #ff9800;
+}
+
+/* Cartão do jogador */
+.player-card {
+    background: #1e1e1e;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+}
+
+/* Botão de excluir jogador */
+.delete-btn {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: #ff4444;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+}
+
+.player-card h3 {
+    margin: 0;
+    color: #ff9800;
+}
+
+.player-card p {
+    font-size: 18px;
+    margin: 10px 0;
+}
