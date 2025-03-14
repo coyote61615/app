@@ -174,7 +174,7 @@ h1 {
     top: 50%; /* Centraliza verticalmente */
     left: 50%; /* Centraliza horizontalmente */
     transform: translate(-50%, -50%); /* Ajuste fino para centralizar */
-    z-index: 1000; /* Garante que fique acima de tudo */
+    z-index: 9999; /* Garante que fique acima de tudo */
     background: rgba(20, 20, 20, 0.95); /* Fundo escuro semi-transparente */
     padding: 20px;
     border-radius: 10px;
